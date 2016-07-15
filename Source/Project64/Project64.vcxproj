@@ -38,6 +38,8 @@
       <MinimumRequiredVersion Condition="'$(Platform)'=='x64'">5.02</MinimumRequiredVersion>
       <StackReserveSize>1</StackReserveSize>
       <DataExecutionPrevention>false</DataExecutionPrevention>
+      <UACExecutionLevel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">HighestAvailable</UACExecutionLevel>
+      <UACExecutionLevel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">HighestAvailable</UACExecutionLevel>
     </Link>
     <Manifest Condition="'$(PlatformToolset)'!='v90'">
       <EnableDPIAwareness>true</EnableDPIAwareness>
