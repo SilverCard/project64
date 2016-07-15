@@ -52,6 +52,7 @@
     <ClCompile Include="N64System\Debugger\Debugger-ViewMemory.cpp" />
     <ClCompile Include="N64System\Debugger\Debugger.cpp" />
     <ClCompile Include="Plugins\PluginList.cpp" />
+    <ClCompile Include="Project64SharedMemoryManager.cpp" />
     <ClCompile Include="Settings\GuiSettings.cpp" />
     <ClCompile Include="Settings\NotificationSettings.cpp" />
     <ClCompile Include="Settings\UISettings.cpp" />
@@ -92,6 +93,7 @@
     <ClInclude Include="N64System\Debugger\Debugger-ViewMemory.h" />
     <ClInclude Include="N64System\Debugger\debugger.h" />
     <ClInclude Include="N64System\Debugger\DebuggerUI.h" />
+    <ClInclude Include="Project64SharedMemoryManager.h" />
     <ClInclude Include="Settings\GuiSettings.h" />
     <ClInclude Include="Settings\NotificationSettings.h" />
     <ClInclude Include="Settings\UISettings.h" />

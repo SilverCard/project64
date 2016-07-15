@@ -2,9 +2,14 @@
 #include <Project64-core/AppInit.h>
 #include "Multilanguage\LanguageSelector.h"
 #include "Settings/UISettings.h"
+#include "Project64SharedMemoryManager.h"
 
 int WINAPI WinMain(HINSTANCE /*hInstance*/, HINSTANCE /*hPrevInstance*/, LPSTR /*lpszArgs*/, int /*nWinMode*/)
 {
+	Project64SharedMemoryManager * man = new Project64SharedMemoryManager();
+	man->MapMemory();
+	man->StartMemoryCopyTask();
+
     try
     {
         CoInitialize(NULL);
@@ -96,6 +101,9 @@ int WINAPI WinMain(HINSTANCE /*hInstance*/, HINSTANCE /*hPrevInstance*/, LPSTR /
         WriteTrace(TraceUserInterface, TraceError, "Exception caught (File: \"%s\" Line: %d)", __FILE__, __LINE__);
         MessageBox(NULL, stdstr_f("Exception caught\nFile: %s\nLine: %d", __FILE__, __LINE__).c_str(), "Exception", MB_OK);
     }
+
+	man->StopMemoryCopyTask();
+
     AppCleanup();
     CoUninitialize();
     return true;

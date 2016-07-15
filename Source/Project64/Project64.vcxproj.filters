@@ -162,6 +162,9 @@
     <ClCompile Include="Settings\UISettings.cpp">
       <Filter>Source Files\Settings Files</Filter>
     </ClCompile>
+    <ClCompile Include="Project64SharedMemoryManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="UserInterface\resource.h">
@@ -292,6 +295,9 @@
     </ClInclude>
     <ClInclude Include="Settings\UISettings.h">
       <Filter>Header Files\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="Project64SharedMemoryManager.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
